@@ -78,7 +78,7 @@ object TPCDSQueryBenchmark extends Logging {
       val queryRelations = scala.collection.mutable.HashSet[String]()
       spark.sql(queryString).queryExecution.analyzed.foreach {
         case SubqueryAlias(alias, _: LogicalRelation) =>
-          queryRelations.add(alias.identifier)
+          queryRelations.add(alias)
         case LogicalRelation(_, _, Some(catalogTable), _) =>
           queryRelations.add(catalogTable.identifier.table)
         case HiveTableRelation(tableMeta, _, _) =>

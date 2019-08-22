@@ -24,7 +24,7 @@ repositories {
 
 ext {
     scalaVersion = "2.11"
-    sparkVersion = "2.4.0"
+    sparkVersion = "2.3.2"
 }
 
 //dependencies {
