@@ -105,7 +105,7 @@ class TPCDSDatagenArguments(val args: Array[String]) {
                          |Usage: spark-submit --class <this class> --conf key=value <spark tpcds datagen jar> [Options]
                          |Options:
                          |  --output-location [STR]                Path to an output location
-                         |  --scale-factor [NUM]                   Scale factor (default: 1)
+                         |  --scale-factor [NUM]                   Volume of data to generate in GB (default: 1)
                          |  --format [STR]                         Output format (default: parquet)
                          |  --overwrite                            Whether it overwrites existing data (default: false)
                          |  --partition-tables                     Whether it partitions output data (default: false)

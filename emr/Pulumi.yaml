@@ -1,0 +1,7 @@
+name: spark-tpcds-emr
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: AWS Python Pulumi program to provision EMR cluster to run TPC-DS benchmark
+  tool

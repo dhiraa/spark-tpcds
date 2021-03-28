@@ -2,9 +2,16 @@
 
 A simple suit to explore Spark performance tuning experiments.
 
-Checkout vanialla [TPS-DS](http://www.tpc.org/tpcds/) before proceeding!
+Please visit the original [TPS-DS](http://www.tpc.org/tpcds/) site for more details. 
+This repo is fork of databricks TPC-DS, with added support of running over `spark-submit`, 
+giving more control to developers for further modification as and when needed.  
 
-TPC-DS is the de-facto industry standard benchmark for measuring the performance of decision support solutions including, but not limited to, Big Data systems. The current version is v2. It models several generally applicable aspects of a decision support system, including queries and data maintenance. Although the underlying business model of TPC-DS is a retail product supplier, the database schema, data population, queries, data maintenance model and implementation rules have been designed to be broadly representative of modern decision support systems.
+TPC-DS is the de-facto industry standard benchmark for measuring the performance of decision support solutions including, 
+but not limited to, Big Data systems. The current version is v2. It models several generally applicable aspects of a decision 
+support system, including queries and data maintenance. Although the underlying business model of TPC-DS is a retail 
+product supplier, the database schema, data population, queries, data maintenance model and implementation rules have 
+been designed to be broadly representative of modern decision support systems.
+
 This benchmark illustrates decision support systems that:
 
     - Examine large volumes of data
@@ -51,6 +58,8 @@ gradle jar
 ### How to run ?
 
 **Generate Data**
+Note: `scale-factor` is volume of data to generate in GB
+
 ```
 spark-submit \
 --master spark://IMCHLT276:7077 \
