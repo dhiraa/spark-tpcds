@@ -130,33 +130,6 @@ build/libs/spark-tpcds.jar \
 
 ```
 
-
-### Ambari Setup [TODO] 
-- https://docs.hortonworks.com/HDPDocuments/Ambari-2.7.3.0/bk_ambari-installation/content/ambari_repositories.html
-- https://www.youtube.com/watch?v=KgungC9I6XM
-- https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Installing_HDP_AMB/content/_edit_the_host_file.html
-
-```
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/authorized_keys
-
-sudo vim /etc/hosts #add following two lines
-    127.0.0.1 localhost.localdomain localhost
-    
-    ::1 localhost6.localdomain6 localhost6
- 
-sudo wget -O /etc/apt/sources.list.d/ambari.list http://public-repo-1.hortonworks.com/ambari/ubuntu18/2.x/updates/2.7.3.0/ambari.list
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
-sudo apt-get update 
-sudo apt-cache showpkg ambari-server 
-sudo apt-cache showpkg ambari-agent
-sudo apt-cache showpkg ambari-metrics-assembly
-sudo apt-get install ambari-server
-ambari-server setup
-ambari-server start
-ambari-server status
-```
-
 ### TODOs
 - Add support for cloud containers
 
