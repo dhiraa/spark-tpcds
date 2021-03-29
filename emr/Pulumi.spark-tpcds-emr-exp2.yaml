@@ -1,0 +1,10 @@
+encryptionsalt: v1:DxCLS//RXhc=:v1:M0jc5cIj8SL1NGmZ:vV8nJDDTEWX00mcwD8e3JvLvOJek3w==
+config:
+  aws:region: ap-south-1
+  spark-tpcds-emr:exp:
+    core_type: m4.large
+    master_type: m4.large
+    task_type: m4.large
+    core_count: 1
+    master_count: 1
+    task_count: 1

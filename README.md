@@ -1,5 +1,7 @@
 # spark-tpcds
 
+## Introduction
+
 A simple suit to explore Spark performance tuning experiments.
 
 Please visit the original [TPS-DS](http://www.tpc.org/tpcds/) site for more details. 
@@ -21,12 +23,29 @@ This benchmark illustrates decision support systems that:
     - Are periodically synchronized with source OLTP databases through database maintenance functions
     - Run on “Big Data” solutions, such as RDBMS as well as Hadoop/Spark based systems
 
-[Specification](http://www.tpc.org/tpc_documents_current_versions/current_specifications.asp)
-[tpc-ds_v2.1.0.pdf](http://www.tpc.org/tpc_documents_current_versions/pdf/tpc-ds_v2.1.0.pdf)
+- [Specification](http://www.tpc.org/tpc_documents_current_versions/current_specifications.asp)
+- [tpc-ds_v2.1.0.pdf](http://www.tpc.org/tpc_documents_current_versions/pdf/tpc-ds_v2.1.0.pdf)
+- [Schema](https://gerardnico.com/data/type/relation/benchmark/tpcds/schema)
+- [Making of TPC DS Paper](https://www.researchgate.net/publication/221311196_The_Making_of_TPC-DS)
 
-[Schema](https://gerardnico.com/data/type/relation/benchmark/tpcds/schema)
+## Benchmark Experiments
 
-[Making of TPC DS Paper](https://www.researchgate.net/publication/221311196_The_Making_of_TPC-DS)
+As with any experiment, Spark TPC-DS benchmark also comes with a lot of knobs that can be tweaked.
+Following list comprises high level yet important knobs that are needed replicating consistent test results.
+
+- TPC-DS format and data size
+- EMR Cluster Configuration
+    - Node Types
+    - Number of Core and Task Nodes
+    - Network speed
+- Apache Spark Software Configuration
+    - Executor configuration
+        - Number of executors
+        - Number Cores
+        - Memory
+    - Adaptive Query Engine
+    
+The whole infrastructure can be provisioned by Pulumi IaC library. Check [here](emn) for more details. 
 
 ### [Standalone Setup](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-standalone-example-2-workers-on-1-node-cluster.html)
 Download the latest version from [here](https://spark.apache.org/downloads.html).
