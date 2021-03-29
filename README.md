@@ -31,6 +31,9 @@ This benchmark illustrates decision support systems that:
 ## Benchmark Experiments
 
 As with any experiment, Spark TPC-DS benchmark also comes with a lot of knobs that can be tweaked.
+
+![](docs/spark-tpcds-experiment.png)
+
 Following list comprises high level yet important knobs that are needed replicating consistent test results.
 
 - TPC-DS format and data size
@@ -65,7 +68,7 @@ sbin/stop-all.sh #to stop
 
 Check your [Spark UI](http://localhost:8080/)!
 
-![](spark_ui.png)
+![](docs/spark_ui.png)
 
 
 ### Build
