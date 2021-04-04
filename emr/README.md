@@ -6,16 +6,26 @@ Check [here](https://www.pulumi.com/docs/get-started/aws/begin/) for Pulumi inst
 
 Note: Only the current user machine is allowed to login by default
 
+![](../docs/pulumi_emr.png)
+
+
 ```
 export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 
 conda activate <YOUR_ENV>
+curl -sSL https://get.pulumi.com | sh
 pip install -r requirements.txt
 
-pulumi stack list # list all stacks
+pulumi stack ls # list all stacks
+
 pulumi init select spark-tpcds-emr-exp1 # initialize the stack if not done already
+
 pulumi stack select spark-tpcds-emr-exp1 # select the required one
+
 pulumi up # to setup EMR
+
+pulumi stack output --json # to list all ID's
+
 pulumi destroy # to terminate EMR cluster 
 ```

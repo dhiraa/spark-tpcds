@@ -184,7 +184,7 @@ spark-submit \
 --executor-memory 2G \
 --executor-cores 2 \
 --total-executor-cores 8 \
---class com.dhiraa.spark.tpcds.TPCDSDataGenerator \
+--class com.dhiraa.spark.sql.perf.tpcds.TPCDSDataGenerator \
 build/libs/spark-tpcds.jar \
 --output-location /tmp/tpcds2h/ \
 --scale-factor 10 \
