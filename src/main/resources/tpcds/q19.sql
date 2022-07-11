@@ -16,4 +16,4 @@ WHERE d_date_sk = ss_sold_date_sk
   AND ss_store_sk = s_store_sk
 GROUP BY i_brand, i_brand_id, i_manufact_id, i_manufact
 ORDER BY ext_price DESC, brand, brand_id, i_manufact_id, i_manufact
-
+LIMIT 100
